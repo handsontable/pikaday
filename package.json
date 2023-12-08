@@ -1,6 +1,6 @@
 {
   "name": "@handsontable/pikaday",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS",
   "keywords": [
     "datepicker",
@@ -12,11 +12,13 @@
   "license": "(0BSD OR MIT)",
   "main": "pikaday",
   "module": "./pikaday.mjs",
+  "typings": "./pikaday.d.ts",
   "sideEffects": [
     "**/*.css"
   ],
   "exports": {
     ".": {
+      "types": "./pikaday.d.ts",
       "import": "./pikaday.mjs",
       "require": "./pikaday.cjs"
     },
