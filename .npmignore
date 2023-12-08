@@ -1,6 +1,7 @@
 node_modules
 examples
 tests
+src
 .editorconfig
 .gitattributes
 .jshintrc
@@ -8,6 +9,7 @@ tests
 .github
 babel.config.js
 jest.config.js
+vite.config.ts
 bower.json
 component.json
 CNAME

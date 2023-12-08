@@ -15,12 +15,10 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "typings": "./pikaday.d.ts",
   "exports": {
     ".": {
       "import": "./pikaday.mjs",
-      "require": "./pikaday.cjs",
-      "types": "./pikaday.d.ts"
+      "require": "./pikaday.cjs"
     },
     "./css/pikaday.css": "./css/pikaday.css",
     "./css/site.css": "./css/site.css",
@@ -36,8 +34,7 @@
   "scripts": {
     "test": "jest",
     "test.watch": "jest --watch",
-    "build": "npm run build:commonjs && npm run build:esm",
-    "build:test": "vite build"
+    "build": "vite build"
   },
   "devDependencies": {
     "jest": "^29.7.0",
