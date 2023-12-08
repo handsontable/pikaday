@@ -1,4 +1,4 @@
-import Pikaday from '../';
+import Pikaday from '../src/pikaday';
 
 describe('Pikaday', () => {
   it('should expose as a CommonJS module', () => {

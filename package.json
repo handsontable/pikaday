@@ -37,12 +37,10 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.23.5",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "moment": "^2.29.4",
     "vite": "^5.0.6"
-  },
-  "dependencies": {
-    "@types/pikaday": "1.7.9"
   }
 }

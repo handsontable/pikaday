@@ -1,5 +1,5 @@
 import moment from 'moment';
-import Pikaday from '../';
+import Pikaday from '../src/pikaday';
 
 function createPikaday(options = {}) {
   const pikaday = new Pikaday(options);
