@@ -5,6 +5,9 @@ tests
 .gitattributes
 .jshintrc
 .npmignore
+.github
+babel.config.js
+jest.config.js
 bower.json
 component.json
 CNAME
