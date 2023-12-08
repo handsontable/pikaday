@@ -1,6 +1,6 @@
 {
   "name": "@handsontable/pikaday",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS",
   "keywords": [
     "datepicker",
@@ -11,14 +11,16 @@
   "bugs": "https://github.com/handsontable/pikaday/issues",
   "license": "(0BSD OR MIT)",
   "main": "pikaday",
-  "module": "pikaday.js",
+  "module": "./pikaday.mjs",
   "sideEffects": [
     "**/*.css"
   ],
+  "typings": "./pikaday.d.ts",
   "exports": {
     ".": {
-      "import": "./pikaday.js",
-      "require": "./pikaday.js"
+      "import": "./pikaday.mjs",
+      "require": "./pikaday.cjs",
+      "types": "./pikaday.d.ts"
     },
     "./css/pikaday.css": "./css/pikaday.css",
     "./css/site.css": "./css/site.css",
@@ -33,12 +35,17 @@
   },
   "scripts": {
     "test": "jest",
-    "test.watch": "jest --watch"
+    "test.watch": "jest --watch",
+    "build": "npm run build:commonjs && npm run build:esm",
+    "build:test": "vite build"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.5",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "vite": "^5.0.6"
+  },
+  "dependencies": {
+    "@types/pikaday": "1.7.9"
   }
 }
