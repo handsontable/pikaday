@@ -1,6 +1,6 @@
 {
   "name": "@handsontable/pikaday",
-  "version": "0.0.5",
+  "version": "1.0.0-beta.1",
   "description": "A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS",
   "keywords": [
     "datepicker",
