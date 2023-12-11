@@ -7,7 +7,7 @@
     "calendar",
     "date"
   ],
-  "homepage": "https://pikaday.com",
+  "homepage": "https://github.com/handsontable/pikaday",
   "bugs": "https://github.com/handsontable/pikaday/issues",
   "license": "(0BSD OR MIT)",
   "main": "pikaday",

@@ -1,9 +1,9 @@
-Pikaday
+@handsontable/pikaday
 ========
 
-[![NPM version][npm-image]][npm-url]
-[![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
+[![NPM version](https://img.shields.io/npm/v/@handsontable/pikaday.svg?style=flat)](https://www.npmjs.com/package/@handsontable/pikaday)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/handsontable/pikaday/blob/master/LICENSE)
+[![NPM downloads](https://img.shields.io/npm/dm/@handsontable/pikaday.svg?style=flat)](https://www.npmjs.com/package/@handsontable/pikaday)
 
 
 ### A refreshing JavaScript Datepicker
@@ -23,26 +23,26 @@ Also see the [changelog](CHANGELOG.md)
 You can install Pikaday as an NPM package:
 
 ```shell
-npm install pikaday
+npm install @handsontable/pikaday
 ```
 
 Or link directly to the CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@handsontable/pikaday/pikaday.js"></script>
 ```
 
 ## Styles
 You will also need to include Pikaday CSS file. This step depends on how Pikaday was installed. Either import from NPM:
 
 ```css
-@import './node_modules/pikaday/css/pikaday.css';
+@import '@handsontable/pikaday/css/pikaday.css';
 ```
 
 Or link to the CDN:
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@handsontable/pikaday/css/pikaday.css">
 ```
 
 ## Usage
@@ -216,7 +216,7 @@ If you use a modular script loader, Pikaday is not bound to the global object an
 See the [AMD example][] for a full version.
 
 ```javascript
-require(['pikaday'], function(Pikaday) {
+require(['@handsontable/pikaday'], function(Pikaday) {
     var picker = new Pikaday({ field: document.getElementById('datepicker') });
 });
 ```
@@ -235,7 +235,7 @@ If you use a CommonJS compatible environment you can use the require function to
 
 
 ```javascript
-var pikaday = require('pikaday');
+var pikaday = require('@handsontable/pikaday');
 ```
 
 When you bundle all your required modules with [Browserify][browserify] and you don't use [Moment.js][moment] specify the ignore option:
@@ -377,14 +377,9 @@ Also [@stas][stas] has a fork [stas/Pikaday][stas Pika], but is now quite old
 
 ## Browser Compatibility
 
-* IE 7+
-* Chrome 8+
-* Firefox 3.5+
-* Safari 3+
-* Opera 10.6+
-
-[![browser compatibility](https://ci.testling.com/rikkert/pikaday.png)
-](https://ci.testling.com/rikkert/pikaday)
+* Chrome (latest major versions)
+* Firefox (latest major versions)
+* Safari (latest major versions)
 
 
 * * *
