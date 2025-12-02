@@ -328,7 +328,7 @@ declare namespace Pikaday {
     /**
      * Callback function for when a date is selected.
      */
-    onSelect?(this: Pikaday, date: Date): void;
+    onSelect?(date: Date): void;
 
     /**
      * Callback function for when the picker becomes visible.
