@@ -424,7 +424,7 @@ export default function Pikaday(options) {
     opts = self.config(options);
 
   self._onMouseDown = function (e) {
-    if (!self._v) {
+    if (!self._v || opts.field?.matches?.(':disabled')) {
       return;
     }
     e = e || getWindow().event;
@@ -492,7 +492,7 @@ export default function Pikaday(options) {
   self._onKeyChange = function (e) {
     e = e || getWindow().event;
 
-    if (self.isVisible()) {
+    if (self.isVisible() && !opts.field?.matches?.(':disabled')) {
       switch (e.keyCode) {
         case 13:
         case 27:
