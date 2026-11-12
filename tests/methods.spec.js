@@ -145,3 +145,33 @@ describe('Pikaday public method', () => {
     });
   });
 });
+
+test('ignores day selection when the bound field is disabled while open', () => {
+  const field = document.createElement('input');
+  const trigger = document.createElement('button');
+  const onSelect = jest.fn();
+  document.body.append(field, trigger);
+
+  const picker = createPikaday({ field, trigger, onSelect });
+  try {
+    picker.setDate(new Date(2027, 4, 5), true);
+    picker.show();
+    const day = picker.el.querySelector('[data-pika-day="12"][data-pika-month="4"]');
+    const selectDay = () => day.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+
+    field.disabled = true;
+    document.dispatchEvent(new KeyboardEvent('keydown', { keyCode: 39 }));
+    selectDay();
+    expect(field.value).toBe('2027-05-05');
+    expect(onSelect).not.toHaveBeenCalled();
+
+    field.disabled = false;
+    selectDay();
+    expect(field.value).toBe('2027-05-12');
+    expect(onSelect).toHaveBeenCalledTimes(1);
+  } finally {
+    picker.destroy();
+    field.remove();
+    trigger.remove();
+  }
+});
